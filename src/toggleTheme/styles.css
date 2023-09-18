@@ -1,0 +1,18 @@
+:root[data-theme='light'] {
+  --bg-color: #f2f3f4;
+  --calculator-color: #403f3e;
+  --buttons-color: #757575;
+  --numbers-color: #9c9a9a;
+  --basic-operations-color: #d6ae33;
+  --title-color: whitesmoke;
+  --box-shadow-color: grey;
+}
+:root[data-theme='dark'] {
+  --calculator-color: #f2f3f4;
+  --bg-color: #1c1c1c;
+  --buttons-color: #708090;
+  --numbers-color: #f8ffcf;
+  --basic-operations-color: #beffa1;
+  --title-color: black;
+  --box-shadow-color: #cfd6f4;
+}

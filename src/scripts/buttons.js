@@ -1,0 +1,23 @@
+export const computation = document.querySelector('.computation');
+export const memorySaveButton = document.querySelector('.memorySave');
+export const memoryReadButton = document.querySelector('.memoryRead');
+export const memoryClearButton = document.querySelector('.memoryClear');
+export const memoryPlusButton = document.querySelector('.memoryPlus');
+export const memoryMinusButton = document.querySelector('.memoryMinus');
+export const buttonsNumbers = document.querySelectorAll('.number');
+export const buttonRemove = document.querySelector('.remove');
+export const buttonAnswer = document.querySelector('.answer');
+export const basicOperationButton =
+  document.querySelectorAll('.basicOperation');
+export const pointButton = document.querySelector('.point');
+export const changeSignButton = document.querySelector('.changeSign');
+export const squareButton = document.querySelector('.square');
+export const cubedButton = document.querySelector('.cubed');
+export const percentButton = document.querySelector('.percent');
+export const toPowersOfXButton = document.querySelector('.toPowersOfX');
+export const xToPowerOfYButton = document.querySelector('.xToPowerOfY');
+export const mathSquareRootButton = document.querySelector('.mathSquareRoot');
+export const mathCubeRootButton = document.querySelector('.mathCubeRoot');
+export const xToRootOfYButton = document.querySelector('.xToRootOfY');
+export const fractionButton = document.querySelector('.fraction');
+export const factorialButton = document.querySelector('.factorial');

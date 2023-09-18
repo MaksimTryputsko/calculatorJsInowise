@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: var(--title-color);
+  font-size: 15px;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+  gap: 50px;
+  margin-top: 100px;
+  background-color: var(--bg-color);
+}
+.calculator {
+  display: flex;
+  flex-direction: column;
+  background: var(--calculator-color);
+  border-radius: 10px;
+  box-shadow: 20px 20px 5px var(--box-shadow-color);
+}
+.calculator__menu {
+  padding: 7px;
+  display: flex;
+  gap: 5px;
+}
+.changeTheme {
+  width: 200px;
+  height: 30px;
+  border-radius: 10px;
+  box-shadow: 20px 20px 5px var(--box-shadow-color);
+}
+.calculator__calculation {
+  margin: 2px 15px;
+
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.calculator__calculation span {
+  font-weight: bold;
+  font-size: 30px;
+  color: var(--title-color);
+}
+.calculator__calculation::placeholder {
+  color: var(--title-color);
+}
+
+.calculator__menu div {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  opacity: 0.6;
+}
+.calculator__menu div:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+.calculator__menu div:nth-child(1) {
+  background-color: rgb(129, 44, 44);
+}
+.calculator__menu div:nth-child(2) {
+  background-color: rgb(252, 207, 40);
+}
+.calculator__menu div:nth-child(3) {
+  background-color: rgb(0, 162, 24);
+}
+.calculator__block {
+  display: flex;
+  flex-direction: column;
+}
+.calculator__block div {
+  display: flex;
+  gap: 0px;
+}
+.calculator__block div:last-child button:first-child {
+  border-bottom-left-radius: 8px;
+}
+.calculator__block div:last-child button:last-child {
+  border-bottom-right-radius: 8px;
+}
+button {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #403e3e;
+  background-color: var(--buttons-color);
+}
+button:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+.null {
+  width: 100px;
+}
+.number,
+.point {
+  background-color: var(--numbers-color);
+  font-size: 20px;
+}
+.basicOperation,
+.answer {
+  font-size: 20px;
+  background-color: var(--basic-operations-color);
+}
+.blocking:hover sup,
+.blocking:hover sub,
+.blocking:hover {
+  background-color: black;
+  color: black;
+  cursor: not-allowed;
+}
