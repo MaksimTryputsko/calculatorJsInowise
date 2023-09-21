@@ -44,6 +44,7 @@ import {
   count,
 } from './scripts/functions/calculationWithXandY';
 import { toggleTheme } from './toggleTheme/toggleTheme';
+import { POWER_OF_NUMBER, ROOT_OF_NUMBER } from './scripts/constants';
 
 toggleTheme();
 
@@ -65,7 +66,8 @@ buttonsNumbers.forEach(button => {
       computation.innerHTML[0] === '0' &&
       computation.innerHTML.length === 1
     ) {
-      return (computation.innerHTML = button.innerHTML);
+      computation.innerHTML = button.innerHTML;
+      return computation.innerHTML;
     }
     computation.innerHTML += button.innerHTML;
   });
@@ -152,7 +154,7 @@ xToPowerOfYButton.addEventListener('click', () => {
     el.addEventListener('click', calculationWithXandY);
   });
   count.value = computation.innerHTML;
-  count.nameOperation = 'powerOfNumber';
+  count.nameOperation = POWER_OF_NUMBER;
 });
 
 mathSquareRootButton.addEventListener('click', () => {
@@ -174,7 +176,7 @@ xToRootOfYButton.addEventListener('click', () => {
   });
 
   count.value = computation.innerHTML;
-  count.nameOperation = 'rootOfNumber';
+  count.nameOperation = ROOT_OF_NUMBER;
 });
 
 fractionButton.addEventListener('click', () => {

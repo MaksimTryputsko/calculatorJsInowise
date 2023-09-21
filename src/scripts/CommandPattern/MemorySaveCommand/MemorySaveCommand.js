@@ -1,14 +1,16 @@
+import { NUMBER_FROM_LOCAL_STORAGE } from '../../constants';
+
 export class MemorySaveCommand {
   constructor(operand) {
     this.operand = operand;
   }
 
   execute() {
-    localStorage.setItem('number', this.operand);
+    localStorage.setItem(NUMBER_FROM_LOCAL_STORAGE, this.operand);
     return this.operand;
   }
 
-  redo(value) {
-    return value;
+  redo() {
+    return this.operand;
   }
 }

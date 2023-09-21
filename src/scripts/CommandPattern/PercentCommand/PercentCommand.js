@@ -1,13 +1,15 @@
 export class PercentCommand {
   constructor(operand) {
-    this.operand = operand;
+    this.operand = parseFloat(operand);
+    this.result;
   }
 
   execute() {
-    return this.operand / 100;
+    this.result = this.operand / 100;
+    return this.result;
   }
 
-  redo(value) {
-    return value * 100;
+  redo() {
+    return this.result * 100;
   }
 }

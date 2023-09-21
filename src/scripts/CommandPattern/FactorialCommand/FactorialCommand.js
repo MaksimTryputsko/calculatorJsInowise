@@ -2,14 +2,16 @@ import { returnFactorial, setFactorial } from '../../functions/factorial';
 
 export class FactorialCommand {
   constructor(operand) {
-    this.operand = operand;
+    this.operand = parseFloat(operand);
+    this.result;
   }
 
   execute() {
-    return setFactorial(this.operand);
+    this.result = setFactorial(this.operand);
+    return this.result;
   }
 
-  redo(value) {
-    return returnFactorial(value);
+  redo() {
+    return returnFactorial(this.result);
   }
 }

@@ -1,17 +1,21 @@
 import { MemoryCalculate } from './MemoryCalculateCommand';
 
-test('Test for memory plus calculate operation', () => {
-  expect(new MemoryCalculate(20, '+').execute()).toBe(20);
+describe('Memory calculate command tests', () => {
+  const mathRootCommandPlus = new MemoryCalculate(20, '+');
+  test('Should execute command with right answer', () => {
+    expect(mathRootCommandPlus.execute()).toBe(20);
+  }),
+    test('Should redo command with right answer', () => {
+      expect(mathRootCommandPlus.redo()).toBe(20);
+    });
 });
 
-test('Test for return memory plus calculate operation', () => {
-  expect(new MemoryCalculate(20, '+').redo()).toBe(20);
-});
-
-test('Test for memory minus calculate operation', () => {
-  expect(new MemoryCalculate(20, '+').execute()).toBe(20);
-});
-
-test('Test for return memory minus calculate operation', () => {
-  expect(new MemoryCalculate(20, '+').redo()).toBe(20);
+describe('Memory calculate command tests', () => {
+  const mathRootCommandMinus = new MemoryCalculate(25, '-');
+  test('Should execute command with right answer', () => {
+    expect(mathRootCommandMinus.execute()).toBe(25);
+  }),
+    test('Should redo command with right answer', () => {
+      expect(mathRootCommandMinus.redo()).toBe(25);
+    });
 });

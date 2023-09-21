@@ -1,15 +1,16 @@
 export class DivideCommand {
   constructor(firstAddend, secondAddend) {
-    this.firstAddend = firstAddend;
-    this.secondAddend = secondAddend;
+    this.firstAddend = parseFloat(firstAddend);
+    this.secondAddend = parseFloat(secondAddend);
+    this.result;
   }
 
   execute() {
-    const result = this.firstAddend / this.secondAddend;
-    return result === Infinity ? 0 : result;
+    this.result = this.firstAddend / this.secondAddend;
+    return this.result === Infinity ? 0 : this.result;
   }
 
-  redo(value) {
-    return value * this.secondAddend;
+  redo() {
+    return this.result * this.secondAddend;
   }
 }

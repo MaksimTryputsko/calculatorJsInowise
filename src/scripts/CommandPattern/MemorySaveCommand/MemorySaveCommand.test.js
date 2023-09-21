@@ -1,9 +1,11 @@
 import { MemorySaveCommand } from './MemorySaveCommand';
 
-test('Test for memory save operation', () => {
-  expect(new MemorySaveCommand(154).execute()).toBe(154);
-});
-
-test('Test for return memory save operation', () => {
-  expect(new MemorySaveCommand(20).redo(30)).toBe(30);
+describe('Memory save command tests', () => {
+  const memorySaveCommand = new MemorySaveCommand(154);
+  test('Should execute command with right answer', () => {
+    expect(memorySaveCommand.execute()).toBe(154);
+  }),
+    test('Should redo command with right answer', () => {
+      expect(memorySaveCommand.redo()).toBe(154);
+    });
 });

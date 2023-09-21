@@ -1,14 +1,16 @@
 export class ExponentiationCommand {
   constructor(operand, power) {
-    this.operand = operand;
-    this.power = power;
+    this.operand = parseFloat(operand);
+    this.power = parseFloat(power);
+    this.result;
   }
 
   execute() {
-    return Math.pow(+this.operand, this.power);
+    this.result = Math.pow(this.operand, this.power);
+    return this.result;
   }
 
-  redo(value) {
-    return Math.pow(value, 1 / this.power);
+  redo() {
+    return Math.pow(this.result, 1 / this.power);
   }
 }

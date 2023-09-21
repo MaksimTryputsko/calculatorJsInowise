@@ -1,9 +1,11 @@
 import { MathRootCommand } from './MathRootCommand';
 
-test('Test for mathematical root operation', () => {
-  expect(new MathRootCommand(25, 2).execute()).toBe(5);
-});
-
-test('Test for return mathematical root operation', () => {
-  expect(new MathRootCommand(25, 2).redo(5)).toBe(25);
+describe('Mathematical root command tests', () => {
+  const mathRootCommand = new MathRootCommand(25, 2);
+  test('Should execute command with right answer', () => {
+    expect(mathRootCommand.execute()).toBe(5);
+  }),
+    test('Should redo command with right answer', () => {
+      expect(mathRootCommand.redo()).toBe(25);
+    });
 });

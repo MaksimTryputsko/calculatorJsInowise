@@ -1,9 +1,11 @@
 import { RemoveComputation } from './RemoveComputation';
 
-test('Test for remove computation', () => {
-  expect(new RemoveComputation(20).execute()).toBe(0);
-});
-
-test('Test for remove computation', () => {
-  expect(new RemoveComputation(30).redo(5)).toBe(5);
+describe('Remove computation command tests', () => {
+  const removeComputation = new RemoveComputation(20);
+  test('Should execute command with right answer', () => {
+    expect(removeComputation.execute()).toBe(0);
+  }),
+    test('Should redo command with right answer', () => {
+      expect(removeComputation.redo()).toBe(20);
+    });
 });

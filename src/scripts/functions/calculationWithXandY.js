@@ -2,6 +2,7 @@ import { computation, buttonsNumbers } from '../buttons';
 import { ExponentiationCommand } from '../CommandPattern/ExponentiationCommand/ExponentiationCommand';
 import { MathRootCommand } from '../CommandPattern/MarhRootCommand/MathRootCommand';
 import { calculator } from '../calculator';
+import { POWER_OF_NUMBER, ROOT_OF_NUMBER } from '../constants';
 
 export const count = {
   value: 0,
@@ -14,13 +15,13 @@ export const calculationWithXandY = () => {
     count.value.length,
     computation.innerHTML.length,
   );
-  if (count.nameOperation === 'powerOfNumber') {
+  if (count.nameOperation === POWER_OF_NUMBER) {
     calculator.setCommand(
       new ExponentiationCommand(firstOperand, secondOperand),
     );
     calculator.executeCommand();
   }
-  if (count.nameOperation === 'rootOfNumber') {
+  if (count.nameOperation === ROOT_OF_NUMBER) {
     calculator.setCommand(new MathRootCommand(firstOperand, secondOperand));
     calculator.executeCommand();
   }

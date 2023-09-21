@@ -1,9 +1,11 @@
 import { MinusCommand } from './MinusCommand';
 
-test('Test for minus operation', () => {
-  expect(new MinusCommand(20, 12).execute()).toBe(8);
-});
-
-test('Test for return minus operation', () => {
-  expect(new MinusCommand(20, 12).redo(8)).toBe(20);
+describe('Minus command tests', () => {
+  const minusCommand = new MinusCommand(20, 8);
+  test('Should execute command with right answer', () => {
+    expect(minusCommand.execute()).toBe(12);
+  }),
+    test('Should redo command with right answer', () => {
+      expect(minusCommand.redo()).toBe(20);
+    });
 });

@@ -1,14 +1,16 @@
 export class MultiplyCommand {
   constructor(firstOperand, secondOperand) {
-    this.firstOperand = firstOperand;
-    this.secondOperand = secondOperand;
+    this.firstOperand = parseFloat(firstOperand);
+    this.secondOperand = parseFloat(secondOperand);
+    this.result;
   }
 
   execute() {
-    return this.firstOperand * this.secondOperand;
+    this.result = this.firstOperand * this.secondOperand;
+    return this.result;
   }
 
-  redo(value) {
-    return value / this.secondOperand;
+  redo() {
+    return this.result / this.secondOperand;
   }
 }

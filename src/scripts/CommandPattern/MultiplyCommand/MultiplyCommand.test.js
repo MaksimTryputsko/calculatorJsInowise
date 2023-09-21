@@ -1,9 +1,11 @@
 import { MultiplyCommand } from './MultiplyCommand';
 
-test('Test for multiply operation', () => {
-  expect(new MultiplyCommand(20, 10).execute()).toBe(200);
-});
-
-test('Test for return multiply operation', () => {
-  expect(new MultiplyCommand(20, 10).redo(200)).toBe(20);
+describe('Multiply command tests', () => {
+  const multiplyCommand = new MultiplyCommand(20, 10);
+  test('Should execute command with right answer', () => {
+    expect(multiplyCommand.execute()).toBe(200);
+  }),
+    test('Should redo command with right answer', () => {
+      expect(multiplyCommand.redo()).toBe(20);
+    });
 });

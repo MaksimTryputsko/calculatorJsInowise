@@ -1,11 +1,15 @@
+import { NUMBER_FROM_LOCAL_STORAGE } from '../../constants';
+
 export class MemoryClearCommand {
   constructor(operand) {
-    this.operand = operand;
-    this.valueFromLocalStorage = localStorage.getItem('number');
+    this.operand = parseFloat(operand);
+    this.valueFromLocalStorage = localStorage.getItem(
+      NUMBER_FROM_LOCAL_STORAGE,
+    );
   }
 
   execute() {
-    localStorage.removeItem('number');
+    localStorage.removeItem(NUMBER_FROM_LOCAL_STORAGE);
     return this.operand;
   }
 

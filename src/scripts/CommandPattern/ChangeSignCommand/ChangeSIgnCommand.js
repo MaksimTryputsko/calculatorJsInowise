@@ -1,16 +1,16 @@
 export class ChangeSignCommand {
   constructor(operand) {
-    this.operand = operand;
+    this.operand = parseFloat(operand);
   }
 
   execute() {
-    if (this.operand === '0') {
+    if (this.operand === 0) {
       return '-';
     }
-    return `${-this.operand}`;
+    return -this.operand;
   }
 
-  redo(value) {
-    return -value;
+  redo() {
+    return this.operand;
   }
 }

@@ -10,7 +10,7 @@ export const setComputation = () => {
   const getOperands = computation.innerHTML.split(getOperator);
   setAnswerWithSimpleMathematicalOperators(
     getOperator,
-    +getOperands[0],
-    +getOperands[1],
+    parseFloat(getOperands[0]),
+    parseFloat(getOperands[1]),
   );
 };

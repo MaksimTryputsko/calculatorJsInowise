@@ -7,7 +7,7 @@ export class RemoveComputation {
     return 0;
   }
 
-  redo(value) {
-    return value;
+  redo() {
+    return this.computation;
   }
 }

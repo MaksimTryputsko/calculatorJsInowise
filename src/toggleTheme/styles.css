@@ -6,13 +6,19 @@
   --basic-operations-color: #d6ae33;
   --title-color: whitesmoke;
   --box-shadow-color: grey;
+  --exit-button: rgb(129, 44, 44);
+  --skip-button: rgb(252, 207, 40);
+  --full-screen: rgb(0, 162, 24);
 }
 :root[data-theme='dark'] {
-  --calculator-color: #f2f3f4;
   --bg-color: #1c1c1c;
+  --calculator-color: #f2f3f4;
   --buttons-color: #708090;
   --numbers-color: #f8ffcf;
   --basic-operations-color: #beffa1;
   --title-color: black;
   --box-shadow-color: #cfd6f4;
+  --exit-button: rgb(255, 0, 0);
+  --skip-button: rgb(255, 200, 0);
+  --full-screen: rgb(0, 255, 38);
 }

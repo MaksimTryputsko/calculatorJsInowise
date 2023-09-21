@@ -1,11 +1,17 @@
+import { NUMBER_FROM_LOCAL_STORAGE } from '../../constants';
 import { MemoryReadCommand } from './MemoryReadCommand';
 
-test('Test for memory read operation', () => {
-  expect(new MemoryReadCommand(44).execute()).toBe(
-    localStorage.getItem('number'),
-  );
-});
-
-test('Test for return memory read operation', () => {
-  expect(new MemoryReadCommand(20).redo()).toBe(20);
+describe('Memory read command tests', () => {
+  const memoryReadCommand = new MemoryReadCommand(44);
+  test('Should execute command with right answer', () => {
+    expect(memoryReadCommand.execute()).toBe(
+      localStorage.getItem(NUMBER_FROM_LOCAL_STORAGE) | 0,
+    );
+  }),
+    test('Should execute command with right answer', () => {
+      expect(new MemoryReadCommand(undefined).execute()).toBe(0);
+    });
+  test('Should redo command with right answer', () => {
+    expect(memoryReadCommand.redo()).toBe(44);
+  });
 });

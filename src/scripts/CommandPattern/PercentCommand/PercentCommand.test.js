@@ -1,9 +1,11 @@
 import { PercentCommand } from './PercentCommand';
 
-test('Test for percent operation', () => {
-  expect(new PercentCommand(5).execute()).toBe(0.05);
-});
-
-test('Test for return percent operation', () => {
-  expect(new PercentCommand(5).redo(0.05)).toBe(5);
+describe('Percent command tests', () => {
+  const multiplyCommand = new PercentCommand(5);
+  test('Should execute command with right answer', () => {
+    expect(multiplyCommand.execute()).toBe(0.05);
+  }),
+    test('Should redo command with right answer', () => {
+      expect(multiplyCommand.redo()).toBe(5);
+    });
 });
